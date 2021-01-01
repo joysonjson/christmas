@@ -118,7 +118,10 @@ function init() {
 
   function openBox() {
     var yourAudio = document.getElementById("felizAudio");
-    yourAudio.play();
+    var particlejs = document.getElementById("particles-js");
+
+    particlejs.style.zIndex = 3;
+    // yourAudio.play();
     document.querySelector(".gift").removeEventListener("click", openBox);
     TweenMax.set(".hat", {
       transformOrigin: "left bottom",
