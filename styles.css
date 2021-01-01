@@ -161,6 +161,7 @@ a:hover {
   background: #ffeab0;
   cursor: pointer;
   z-index: 2;
+  animation: giftAnime 3s ease infinite alternate;
   /* display: none; */
 }
 
