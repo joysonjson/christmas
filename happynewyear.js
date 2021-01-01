@@ -127,7 +127,7 @@ function init() {
   function openBox() {
     var yourAudio = document.getElementById("felizAudio");
 
-    // yourAudio.play();
+    yourAudio.play();
     document.querySelector(".gift").removeEventListener("click", openBox);
     TweenMax.set(".hat", {
       transformOrigin: "left bottom",
