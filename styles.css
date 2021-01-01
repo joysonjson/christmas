@@ -1,8 +1,13 @@
+body,
+html {
+  margin: 0px;
+  height: 100%;
+  overflow-y: hidden;
+}
 body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0;
   padding: 0;
   /* overflow: hidden; */
 }
@@ -114,6 +119,7 @@ body {
   display: none;
   background-color: transparent;
   pointer-events: none;
+  z-index: 2;
 }
 #overlays {
   pointer-events: all !important;
@@ -251,4 +257,13 @@ a:hover {
   to {
     fill: #fff;
   }
+}
+
+#firecracker {
+  opacity: 0.5;
+  z-index: 2;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
 }

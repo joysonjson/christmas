@@ -5,8 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="styles.css" />
+    	<script type="text/javascript" src="firecracker.js"></script>
+
   </head>
   <body>
+    <script>
+
+function reloadIt() {
+    if (window.location.href.substr(-2) !== "?r") {
+        window.location = window.location.href + "?r";
+    }
+}
+
+setTimeout('reloadIt()', 1000)();
+
+</script>
+      
+
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
 
@@ -16,6 +31,8 @@
       });
     </script>
     <div id="particles-js"></div>
+         <canvas id="firecracker"></canvas>
+
     <audio
       style="display: none"
       id="felizAudio"
@@ -36,12 +53,12 @@
       <!-- <script type="text/javascript" src="particles.js"></script>
       <script type="text/javascript" src="app.js"></script> -->
       <script type="text/javascript" src="happynewyear.js"></script>
-
-      <!-- <div class="svg-animation-container">
+<!-- 
+      <div class="svg-animation-container">
         <object data="./img.svg" type="image/svg+xml" class="logo"></object>
       </div> -->
 
-      <svg class="scene" viewBox="0 0 1600 900">
+     <svg class="scene" viewBox="0 0 1600 900"> 
         <clipPath id="sceneClipPath">
           <rect x="0" y="0" width="1600" height="900" />
         </clipPath>
@@ -2436,7 +2453,8 @@
             </linearGradient>
           </defs>
         </svg>
-      </div>
+      </div> 
+     
     </div>
   </body>
 </html>
