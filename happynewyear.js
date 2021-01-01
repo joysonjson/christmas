@@ -119,7 +119,9 @@ function init() {
   function openBox() {
     var yourAudio = document.getElementById("felizAudio");
     var particlejs = document.getElementById("particles-js");
+    // var textLayer = document.getElementById("textLayer");
 
+    // textLayer.style.zIndex = 3;
     particlejs.style.zIndex = 3;
     // yourAudio.play();
     document.querySelector(".gift").removeEventListener("click", openBox);
