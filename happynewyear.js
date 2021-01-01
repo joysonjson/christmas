@@ -116,7 +116,18 @@ function init() {
     copyAnim();
   }
 
+  function changeIndex() {
+    var particlejs = document.getElementById("particles-js");
+    var textLayer = document.getElementById("textLayer");
+
+    textLayer.style.zIndex = 3;
+    particlejs.style.zIndex = 3;
+  }
+
   function openBox() {
+    var yourAudio = document.getElementById("felizAudio");
+
+    yourAudio.play();
     document.querySelector(".gift").removeEventListener("click", openBox);
     TweenMax.set(".hat", {
       transformOrigin: "left bottom",
@@ -141,6 +152,8 @@ function init() {
         document.querySelector(".gift").classList.add("hidden");
       },
     });
+    presentOpened = true;
+    setTimeout(changeIndex, 1000);
   }
 
   function startAnimations() {

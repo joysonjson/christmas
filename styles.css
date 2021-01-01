@@ -1,8 +1,13 @@
+body,
+html {
+  margin: 0px;
+  height: 100%;
+  overflow-y: hidden;
+}
 body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0;
   padding: 0;
   /* overflow: hidden; */
 }
@@ -13,6 +18,18 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  background: linear-gradient(
+      to bottom,
+      rgba(117, 114, 113, 0.8) 10%,
+      rgba(40, 49, 77, 0.8) 30%,
+      rgba(29, 35, 71, 0.8) 50%,
+      rgba(19, 25, 28, 0.8) 80%,
+      rgba(15, 14, 14, 0.8) 100%
+    ),
+    url(https://38.media.tumblr.com/tumblr_m00c3czJkM1qbukryo1_500.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
 }
 .svg-animation-container {
   /* width: 900px; */
@@ -85,18 +102,7 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-      to bottom,
-      rgba(117, 114, 113, 0.8) 10%,
-      rgba(40, 49, 77, 0.8) 30%,
-      rgba(29, 35, 71, 0.8) 50%,
-      rgba(19, 25, 28, 0.8) 80%,
-      rgba(15, 14, 14, 0.8) 100%
-    ),
-    url(https://38.media.tumblr.com/tumblr_m00c3czJkM1qbukryo1_500.gif);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 50%;
+  z-index: 2;
 }
 
 body {
@@ -112,6 +118,12 @@ body {
   top: 0;
   left: 0;
   display: none;
+  background-color: transparent;
+  pointer-events: none;
+  z-index: 2;
+}
+#overlays {
+  pointer-events: all !important;
 }
 
 .credits {
@@ -146,14 +158,134 @@ a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background: black;
+  background: #ffeab0;
   cursor: pointer;
   z-index: 2;
+  animation: giftAnime 3s ease infinite alternate;
+  /* display: none; */
 }
 
 .gift svg {
   width: 100%;
   height: 100%;
   position: absolute;
-  background-color: transparent;
+  background-color: #ffeab0;
+}
+
+#felizAudio {
+  z-index: 10;
+}
+.whatsapp {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+}
+.github {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 100;
+}
+
+#byjoy {
+  z-index: 2;
+  margin-top: 20rem;
+  right: 8rem;
+  animation: fillAnim 0.5s ease forwards 3.5s;
+  /* bottom: 1rem; */
+  /* position: absolute; */
+}
+
+#byjoy path:nth-child(1) {
+  /* stroke-dasharray: 5px; */
+}
+#byjoy path:nth-child(2) {
+  stroke-dasharray: 254;
+  stroke-dashoffset: 254;
+  animation: lineAnimation 2s ease forwards infinite;
+}
+#byjoy path:nth-child(3) {
+  stroke-dasharray: 180;
+  stroke-dashoffset: 180;
+  animation: lineAnimation 2s ease forwards infinite;
+}
+#byjoy path:nth-child(4) {
+  stroke-dasharray: 130;
+  stroke-dashoffset: 130;
+  animation: lineAnimation 2s ease forwards infinite;
+}
+#byjoy path:nth-child(5) {
+  stroke-dasharray: 235;
+  stroke-dashoffset: 235;
+  animation: lineAnimation 2s ease forwards infinite;
+}
+#byjoy path:nth-child(6) {
+  stroke-dasharray: 155;
+  stroke-dashoffset: 155;
+  animation: lineAnimation 2s ease forwards infinite;
+}
+
+#byjoy path:nth-child(7) {
+  stroke-dasharray: 235;
+  stroke-dashoffset: 235;
+  animation: lineAnimation 2s ease forwards infinite;
+}
+
+#byjoy path:nth-child(8) {
+  stroke-dasharray: 251;
+  stroke-dashoffset: 251;
+  animation: lineAnimation 2s ease forwards infinite;
+}
+
+#byjoy path:nth-child(9) {
+  stroke-dasharray: 254;
+  stroke-dashoffset: 254;
+  animation: lineAnimation 2s ease forwards infinite;
+}
+
+#byjoy path:nth-child(10) {
+  stroke-dasharray: 205;
+  stroke-dashoffset: 205;
+  animation: lineAnimation 2s ease forwards infinite;
+}
+
+@keyframes lineAnimation {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fillAnim {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: #fff;
+  }
+}
+
+#firecracker {
+  opacity: 0.5;
+  z-index: 2;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  background: linear-gradient(
+      to bottom,
+      rgba(117, 114, 113, 0.8) 10%,
+      rgba(40, 49, 77, 0.8) 30%,
+      rgba(29, 35, 71, 0.8) 50%,
+      rgba(19, 25, 28, 0.8) 80%,
+      rgba(15, 14, 14, 0.8) 100%
+    ),
+    url(https://38.media.tumblr.com/tumblr_m00c3czJkM1qbukryo1_500.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
 }
