@@ -78,8 +78,9 @@ class Firework {
     if (this.y < 350 - Math.sqrt(Math.random() * 500) * 40) {
       this.isBlown = true;
       var crackerAudio = document.getElementById("crackerPlayer");
-
-      crackerAudio.play();
+      if (presentOpened) {
+        crackerAudio.play();
+      }
       for (let i = 0; i < 60; i++) {
         particles.push(new Particle(this.x, this.y, this.col));
       }

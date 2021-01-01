@@ -152,6 +152,7 @@ function init() {
         document.querySelector(".gift").classList.add("hidden");
       },
     });
+    presentOpened = true;
     setTimeout(changeIndex, 1000);
   }
 

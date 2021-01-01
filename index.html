@@ -5,25 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="styles.css" />
-    	<script type="text/javascript" src="firecracker.js"></script>
-
+    <script type="text/javascript" src="firecracker.js"></script>
   </head>
   <body>
-    <script>
-
-function reloadIt() {
-    if (window.location.href.substr(-2) !== "?r") {
-        window.location = window.location.href + "?r";
-    }
-}
-
-// setTimeout('reloadIt()', 1000)();
-
-</script>
-      <canvas id="firecracker"></canvas>
+    <canvas id="firecracker"></canvas>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
-
+    <script type="text/javascript">
+      var presentOpened = false;
+    </script>
     <script>
       particlesJS.load("particles-js", "./particles.json", function () {
         console.log("callback - particles.js config loaded");
@@ -37,14 +27,14 @@ function reloadIt() {
       src="feliz.mp3"
       controls
     ></audio>
-     <audio
+    <audio
       style="display: none"
       id="crackerPlayer"
       src="crackers.mp3"
       controls
     ></audio>
     <a
-      href="https://api.whatsapp.com/send?text=Happy New year!. Please find Joyson's greetings. https://joysonjson.github.io/christmas/""
+      href="https://api.whatsapp.com/send?text=Happy New year!. Please find Joyson's greetings. https://joysonjson.github.io/christmas/"
       data-action="share/whatsapp/share"
     >
       <img
@@ -53,16 +43,21 @@ function reloadIt() {
         alt=""
       />
     </a>
-    <div id="snow-fall-container">
-      <!-- <script type="text/javascript" src="particles.js"></script>
-      <script type="text/javascript" src="app.js"></script> -->
-      <script type="text/javascript" src="happynewyear.js"></script>
-<!-- 
-      <div class="svg-animation-container">
-        <object data="./img.svg" type="image/svg+xml" class="logo"></object>
-      </div> -->
+    <a
+      href="https://github.com/joysonjson/christmas"
+      data-action="share/github/share"
+    >
+      <img
+        class="github"
+        src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+        alt=""
+      />
+    </a>
 
-     <svg id="textLayer" class="scene" viewBox="0 0 1600 900"> 
+    <div id="snow-fall-container">
+      <script type="text/javascript" src="happynewyear.js"></script>
+
+      <svg id="textLayer" class="scene" viewBox="0 0 1600 900">
         <clipPath id="sceneClipPath">
           <rect x="0" y="0" width="1600" height="900" />
         </clipPath>
@@ -2457,8 +2452,7 @@ function reloadIt() {
             </linearGradient>
           </defs>
         </svg>
-      </div> 
-     
+      </div>
     </div>
   </body>
 </html>
