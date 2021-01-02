@@ -160,7 +160,7 @@ a:hover {
   height: 100%;
   background: #ffeab0;
   cursor: pointer;
-  z-index: 2;
+  z-index: 4;
   animation: giftAnime 3s ease infinite alternate;
   /* display: none; */
 }
@@ -288,4 +288,31 @@ a:hover {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
+}
+
+#tapandzoom {
+  position: absolute;
+  z-index: 3;
+  pointer-events: none;
+  height: 60px;
+  width: 60px;
+  animation: zoomHand 3s infinite alternate;
+}
+
+#zoomHand {
+  animation: zoomanime 3s infinite alternate;
+}
+@keyframes zoomanime {
+  0% {
+    transform: scale(0.5);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  70% {
+    transform: scale(1);
+  }
+  /* 100% {
+    transform: scale(1);
+  } */
 }

@@ -126,8 +126,16 @@ function init() {
 
   function openBox() {
     var yourAudio = document.getElementById("felizAudio");
+    var el = document.getElementById("snowPenguins");
+
+    let rect = el.getBoundingClientRect();
+
+    var d = document.getElementById("tapandzoom");
+    d.style.left = rect.x + "px";
+    d.style.top = rect.y + "px";
 
     yourAudio.play();
+
     document.querySelector(".gift").removeEventListener("click", openBox);
     TweenMax.set(".hat", {
       transformOrigin: "left bottom",
@@ -666,6 +674,10 @@ function init() {
   function zoomViewBox(e) {
     if (zoom || !animationOn) {
       return;
+    }
+    let zoomHand = document.getElementById("tapandzoom");
+    if (zoomHand) {
+      zoomHand.style.display = "none";
     }
     e.stopPropagation();
     var id = this.getAttribute("id");
